@@ -1,5 +1,5 @@
 {% set name = "bluesky-queueserver-api" %}
-{% set version = "0.0.2" %}
+{% set version = "0.0.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 633a7d572c5b4fbf42cb3c12d70e9ce67ffa97cb4a4dc8018a077ed732a215d6
+  sha256: 0ceff00816a3488bf80c62e384a9fa1394759f7a9691f97579b7d845ee84b82e
 
 build:
   noarch: python
@@ -26,9 +26,9 @@ requirements:
 test:
   imports:
     - bluesky_queueserver_api
-  commands:      # [not win]
+  commands:   # [not win]
     - pip check  # [not win]
-  requires:      # [not win]
+  requires:   # [not win]
     - pip        # [not win]
 
 about:
