@@ -20,7 +20,8 @@ requirements:
     - python {{ python_min }}
   run:
     - bluesky-queueserver
-    - httpx
+    - websockets
+    - httpx2
     - python >={{ python_min }}
 
 test:
