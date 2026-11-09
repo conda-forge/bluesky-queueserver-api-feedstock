@@ -1,13 +1,13 @@
 {% set name = "bluesky-queueserver-api" %}
-{% set version = "0.0.13" %}
+{% set version = "0.0.14" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: 696846f8755050853172b79ad346ce5003e38e9077b8cadc667768cb908c9cc2
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
+  sha256: e6d1db59acc76dd911b97e69dbdd8eef9258e1c37a72bfdfc4ca01bc33134766
 
 build:
   noarch: python
@@ -20,7 +20,8 @@ requirements:
     - python {{ python_min }}
   run:
     - bluesky-queueserver
-    - httpx
+    - websockets
+    - httpx2
     - python >={{ python_min }}
 
 test:
